@@ -7,8 +7,8 @@ body {
 
 .phone{
     position: relative;
-    height: 1020px;
-    width: 480px;
+    height: 600px;
+    width: 277px;
     background: #121212;
     border-radius: 40px;
 }
@@ -22,6 +22,33 @@ body {
     background: #fff;
     border-radius: 20px;   
     overflow: hidden; 
+}
+
+.screen2{
+    position: relative;
+    top: 300px;
+    bottom: 0px;
+    right: 10px;
+    left: 10px;
+    background: #fff;
+    border-radius: 20px;   
+    overflow: hidden; 
+}
+
+.passaro{
+    position: absolute;
+    top: 39.96%;
+    bottom: 46.73%;
+    right: -7%;
+    left: 80.19%;
+}
+
+.pau{
+    position: absolute;
+    top: 13.77%;
+    bottom: -2.9%;
+    right: 49.04%;
+    left: 39.84%;
 }
 
 
