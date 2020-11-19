@@ -38,6 +38,24 @@ body {
     text-align: center;
 }
 
+.splashtext{
+    position: absolute;
+    left: 34.54%;
+    right: 34.53%;
+    top: 52.01%;
+    bottom: 41.96%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 45px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #373737;
+}
+
 .passaro{
     position: absolute;
     top: 39.96%;
@@ -75,6 +93,146 @@ body {
     
 }
 
+.youcanclick{
+    position: absolute;
+    top: 600px;
+    bottom: 0px;
+    right: 75px;
+    left: 75px;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.next{
+    position: absolute;
+    top: 83.71%;
+    bottom: 11.16%;
+    right: 28.99%;
+    left: 28.5%;
+}
+
+.skiptutorial{
+    position: absolute;
+    top: 90.96%;
+    bottom: 3.91%;
+    right: 28.99%;
+    left: 28.5%;
+}
+
+.circle{
+    position: absolute;
+    width: 105px;
+    height: 102px;
+    left: 148px;
+    top: 420px;
+}
+
+.safeplace{
+    position: absolute;
+    width: 66px;
+    height: 54px;
+    left: 169px;
+    top: 438px;
+}
+
+.tutorialtext{
+    position: absolute;
+    top: 30.69%;
+    bottom: 60.94%;
+    right: 60px;
+    left: 60px;
+
+    font-family: Mulish;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #373737;
+}
+
+.tutorialtext2{
+    position: absolute;
+    top: 200px;
+    bottom: 0px;
+    right: 60px;
+    left: 60px;
+
+    font-family: Mulish;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: center;
+    color: #373737;
+}
+
+.learnmore{
+    position: absolute;
+    width: 66px;
+    height: 32px;
+    left: 167px;
+    top: 444px;
+}
+
+.learnmoretext{
+    position: absolute;
+    top: 485px;
+    bottom: 0px;
+    right: 55px;
+    left: 60px;
+    
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #373737;
+}
+
+.shuffle{
+    position: absolute;
+    width: 66px;
+    height: 70px;
+    left: 169px;
+    top: 436px;
+}
+
+.circle2{
+    position: absolute;
+    top: 36.94%;
+    bottom: 33.93%;
+    right: 17.87%;
+    left: 17.15%;
+}
+
+.relaxation{
+    position: absolute;
+    top: 40.4%;
+    bottom: 53.57%;
+    right: 26.37%;
+    left: 25.85%;
+}
+
+.music{
+    position: absolute;
+    top: 48.49%;
+    bottom: 45.48%;
+    right: 26.47%;
+    left: 25.85%;
+}
+
+.todolist{
+    position: absolute;
+    top: 56.57%;
+    bottom: 37.4%;
+    right: 26.65%;
+    left: 25.85%;
+}
 
 section {
     height: 1020px;
@@ -109,11 +267,12 @@ h2 {
     font-weight:100;
 }
 
-.center{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20%;
+.splashlogo{
+    position: absolute;
+    width: 99px;
+    height: 99px;
+    left: 145px;
+    top: 350px;
 }
 
 @keyframes fadeIn {
