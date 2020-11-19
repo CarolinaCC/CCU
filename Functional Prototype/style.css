@@ -11,6 +11,7 @@ body {
     width: 414px;
     background: #121212;
     border-radius: 40px;
+    overflow: hidden;
 }
 
 .screen{
@@ -24,31 +25,54 @@ body {
     overflow: hidden; 
 }
 
-.screen2{
-    position: relative;
-    top: 300px;
+.bottomtext{
+    position: absolute;
+    top: 750px;
     bottom: 0px;
-    right: 10px;
-    left: 10px;
-    background: #fff;
-    border-radius: 20px;   
-    overflow: hidden; 
+    right: 20px;
+    left: 20px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 20px;
+    text-align: center;
 }
 
 .passaro{
     position: absolute;
     top: 39.96%;
     bottom: 46.73%;
-    right: -7%;
-    left: 80.19%;
+    right: 0px;
+    left: 220px;
+}
+
+.faladopassaro{
+    position: absolute;
+    top: 14.17%;
+    bottom: 77.46%;
+    right: 41.55%;
+    left: 14.49%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+.nameinput{
+    position: absolute;
+    top: 180px;
+    bottom: 0px;
+    right: 41.55%;
+    left: 14.49%;
 }
 
 .pau{
     position: absolute;
-    top: 13.77%;
-    bottom: -2.9%;
-    right: 49.04%;
-    left: 39.84%;
+    top: 424px;
+    bottom: 0px;
+    right: 0px;
+    left: 58px;
+    
 }
 
 
@@ -68,7 +92,7 @@ header {
     padding-top: 20px;
     align-items: center;
     justify-content: center;
-    font-family: "Abril Fatface", cursive;
+    font-family: "Mulish", sans-serif;
     font-size:2.5rem;
     text-align:center;
     font-weight:100;
@@ -79,7 +103,7 @@ h2 {
     padding-top: 320px;
     align-items: center;
     justify-content: center;
-    font-family: "Abril Fatface", cursive;
+    font-family: "Mulish", sans-serif;
     font-size:2.5rem;
     text-align:center;
     font-weight:100;
