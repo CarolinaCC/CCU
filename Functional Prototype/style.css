@@ -64,6 +64,14 @@ body {
     left: 220px;
 }
 
+.smallpassaro{
+    position: absolute;
+    width: 53px;
+    height: 57px;
+    left: 70%;
+    top: 14.5%;
+}
+
 .faladopassaro{
     position: absolute;
     top: 14.17%;
@@ -91,6 +99,39 @@ body {
     right: 0px;
     left: 58px;
     
+}
+
+.smallpau{
+    position: absolute;
+    width: 151px;
+    height: 41px;
+    left: 61%;
+    top: 19%;
+}
+
+.smallpau2{
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: -4%;
+    top: 72.88%;
+    transform: matrix(-1, 0.06, 0.06, 1, 0, 0);
+}
+
+.separator{
+    position: absolute;
+    left: -0.97%;
+    right: 0.97%;
+    top: 90.29%;
+    bottom: 9.71%;
+}
+
+.bottombuttons{
+    position: absolute;
+    width: 260.54px;
+    height: 54px;
+    left: 72px;
+    top: 815px;
 }
 
 .youcanclick{
@@ -210,6 +251,14 @@ body {
     left: 17.15%;
 }
 
+.circle3{
+    position: absolute;
+    width: 93px;
+    height: 93px;
+    left: 265px;
+    top: 113px;
+}
+
 .relaxation{
     position: absolute;
     top: 40.4%;
@@ -232,6 +281,60 @@ body {
     bottom: 37.4%;
     right: 26.65%;
     left: 25.85%;
+}
+
+.menurelaxation{
+    position: absolute;
+    top: 309px;
+    width: 256px;
+    height: 70px;
+    left: 41px;
+}
+
+.menumusic{
+    position: absolute;
+    top: 403px;
+    width: 256px;
+    height: 70px;
+    left: 41px;
+}
+
+.menutodolist{
+    position: absolute;
+    top: 497px;
+    width: 256px;
+    height: 70px;
+    left: 41px;
+}
+
+.menushuffle1{
+    position: absolute;
+    width: 70px;
+    height: 72px;
+    left: 304px;
+    top: 310.89px;
+}
+
+.menushuffle2{
+    position: absolute;
+    width: 70px;
+    height: 72px;
+    left: 305px;
+    top: 402.89px;
+}
+
+.welcometext{
+    position: absolute;
+    top: 13.73%;
+    bottom: 83.48%;
+    right: 56.28%;
+    left: 10.14%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 25px;
 }
 
 section {
