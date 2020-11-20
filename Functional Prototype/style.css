@@ -88,11 +88,11 @@ body {
     position: absolute;
     top: 200px;
     bottom: 0px;
-    right: 41.55%;
-    left: 14.49%;
-    font-style: normal;
+    right: 60%;
+    left: 14%;
+    font-style: bold;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     float: left;
 }
 
@@ -337,7 +337,7 @@ body {
     font-family: Mulish;
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 25px;
 }
 

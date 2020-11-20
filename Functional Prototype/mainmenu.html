@@ -23,9 +23,13 @@
             <div class="phone">
                 <div class="screen"></div>
                 <div class="welcometext">
-                    <h3>
-                        <p>Welcome Alex!</p>
-                    </h3>
+                    <p>Welcome <span id="nameUser"></span>!</p>
+                    <script>
+                        getValue();
+                        function getValue() {
+                            document.getElementById("nameUser").append(localStorage.getItem('user_name'));
+                        }
+                    </script>
                 </div>
                 <div>
                     <img src="./img/pau.svg" alt= "Header" class="smallpau">
