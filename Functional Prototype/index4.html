@@ -33,9 +33,13 @@
                     </h3>
                 </div>
                 <div class="nameinput">
-                    <form>
-                        <input id="lfname" name="fname" type="text" />
-                    </form>
+                    <span id="nameUser"></span>
+                    <script>
+                        getValue();
+                        function getValue() {
+                            document.getElementById("nameUser").append(localStorage.getItem('user_name'));
+                        }
+                    </script>
                 </div>
                 <div class="youcanclick">
                     <h3>

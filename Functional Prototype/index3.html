@@ -33,12 +33,25 @@
                     </h3>
                 </div>
                 <div class="nameinput">
-                    <form>
-                        <input id="lfname" name="fname" type="text" />
+                    <form id="nameUser">
+                        <input type="text" name="name" id="name" value=""> <!-- Nao se pode clicar enter -->
+                        <div onclick="javascript: saveName()">
+                            <img src="img/next.svg" alt= "Header" class="next"> <!-- change to confirm -->
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </header>    
+
+    <script type="text/javascript">
+        var saveName = function(){
+            var formEl = document.forms.nameUser;
+            var formData = new FormData(formEl);
+            var name = formData.get('name');
+            localStorage.setItem("user_name", name);
+            location.replace("index4.html");
+        };
+    </script>
 </body>
 </html>

@@ -86,10 +86,14 @@ body {
 
 .nameinput{
     position: absolute;
-    top: 180px;
+    top: 200px;
     bottom: 0px;
     right: 41.55%;
     left: 14.49%;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    float: left;
 }
 
 .pau{
@@ -113,7 +117,7 @@ body {
     position: absolute;
     width: 220px;
     height: 60px;
-    left: -4%;
+    left: 10px;
     top: 72.88%;
     transform: matrix(-1, 0.06, 0.06, 1, 0, 0);
 }
