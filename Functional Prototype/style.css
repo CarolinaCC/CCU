@@ -527,3 +527,112 @@ h2 {
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
 }
+
+/*MOOD TRACKER*/
+.smallpauinverted{
+    position: absolute;
+    width: 118,52px;
+    height: 32px;
+    left: 2.5%;
+    top: 23.88%;
+    bottom: 72.54%;
+
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.smallbirdinverted{
+    position: absolute;
+    width: 50,65px;
+    height: 53px;
+    right: 74%;
+    top: 19.20%;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+
+}
+
+.smallbirdtext{
+    position: absolute;
+    left: 43%;
+    right: 11.11%;
+    top: 21.65%;
+    bottom: 75.78%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #373737;
+}
+
+/*page 1: 1st rectangule*/
+.stressedbutton{
+    position: absolute;
+    width: 334px;
+    height: 70px;
+    left: 41px;
+    top: 352px;
+
+    background: #FADCD6;
+    border-radius: 10px;
+}
+
+/*page 1: 2nd rectangule*/
+.anxiousbutton{
+    position: absolute;
+    width: 334px;
+    height: 70px;
+    left: 41px;
+    top: 454px;
+
+    background: #EAF6FD;
+    border-radius: 10px;
+}
+
+
+/*page 1: 3rd rectangule*/
+.overwhelmedbutton{
+    position: absolute;
+    width: 334px;
+    height: 70px;
+    left: 39px;
+    top: 556px;
+
+    background: #E3CABA;
+    border-radius: 10px;
+}
+
+.buttons_text{
+    position: absolute;
+    width: 207.74px;
+    height: 23px;
+    left: 30px;
+    top: 10px;
+    
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+
+    display: flex;
+    text-align: left;
+
+    color: #373737;
+}
+
+
+/*page 2 of mood tracker*/
+
+.quickmeditation{
+    position: absolute;
+    width: 334px;
+    height: 70px;
+    left: 41px;
+    top: 454px;
+
+    background: #FADCD6;
+    border-radius: 10px;
+}
+
