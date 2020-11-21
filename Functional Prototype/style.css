@@ -21,8 +21,8 @@ body {
     right: 10px;
     left: 10px;
     background: #fff;
-    border-radius: 20px;   
-    overflow: hidden; 
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .bottomtext{
@@ -103,7 +103,7 @@ body {
     bottom: 0px;
     right: 0px;
     left: 58px;
-    
+
 }
 
 .smallpau{
@@ -230,7 +230,7 @@ body {
     bottom: 0px;
     right: 55px;
     left: 60px;
-    
+
     font-family: Mulish;
     font-style: normal;
     font-weight: 600;
@@ -340,6 +340,140 @@ body {
     font-weight: 600;
     font-size: 20px;
     line-height: 25px;
+}
+
+.menumeditation{
+    position: absolute;
+    width: 334px;
+    height: 150px;
+    left: 42px;
+    top: 211px;
+}
+
+.menubreathing{
+    position: absolute;
+    width: 336px;
+    height: 150px;
+    left: 42px;
+    top: 385px;
+}
+
+.menuyoga{
+    position: absolute;
+    width: 339px;
+    height: 150px;
+    left: 38px;
+    top: 554px;
+}
+
+.menumeditationchar{
+    position: absolute;
+    width: 172px;
+    height: 117px;
+    left: 194px;
+    top: 227px;
+}
+
+.menubreathingchar{
+    position: absolute;
+    width: 176px;
+    height: 135px;
+    left: 182px;
+    top: 398px;
+}
+
+.menuyogachar{
+    position: absolute;
+    width: 141.14px;
+    height: 125.87px;
+    left: 197px;
+    top: 566px;
+}
+
+.menumeditationtext{
+    position: absolute;
+    left: 10%;
+    right: 49.28%;
+    top: -10%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    text-align: left;
+}
+
+.menubreathingtext{
+    position: absolute;
+    left: 10%;
+    right: 52.42%;
+    top: 14%;
+    bottom: 46.43%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    text-align: left;
+}
+
+.menuyogatext{
+    position: absolute;
+    left: 0%;
+    right: 54.5%;
+    top: 33%;
+    bottom: 28.12%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    text-align: left;
+}
+
+.screentitle{
+    position: absolute;
+    width: 288px;
+    height: 23px;
+    left: 90px;
+    top: 50px;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: left;
+}
+
+.underscreentitle{
+    position: absolute;
+    width: 207.74px;
+    height: 18px;
+    left: 92px;
+    top: 78px;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    text-align: left;
+}
+
+.backbutton{
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    left: 34px;
+    top: 58px;
 }
 
 section {

@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
 
     <style>
@@ -35,14 +35,14 @@
                 <div class="nameinput">
                     <form id="nameUser">
                         <input type="text" name="name" id="name" value=""> <!-- Nao se pode clicar enter -->
-                        <div onclick="javascript: saveName()">
-                            <img src="img/next.svg" alt= "Header" class="next"> <!-- change to confirm -->
-                        </div>
                     </form>
+                </div>
+                <div onclick="javascript: saveName()">
+                    <img src="img/confirm.svg" alt= "Header" class="skiptutorial"> <!-- change to confirm -->
                 </div>
             </div>
         </div>
-    </header>    
+    </header>
 
     <script type="text/javascript">
         var saveName = function(){
