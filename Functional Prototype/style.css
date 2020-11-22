@@ -14,6 +14,7 @@ body {
     overflow: hidden;
 }
 
+
 .screen{
     position: absolute;
     top: 20px;
@@ -137,6 +138,14 @@ body {
     height: 54px;
     left: 72px;
     top: 815px;
+}
+
+.bottombuttons2{
+    position: absolute;
+    width: 260.54px;
+    height: 54px;
+    left: 65px;
+    top: 785px;
 }
 
 .youcanclick{
@@ -435,6 +444,114 @@ body {
     line-height: 23px;
     display: flex;
     text-align: left;
+}
+
+.meditationbg{
+    position: absolute;
+    width: 792.73px;
+    height: 558.48px;
+    left: -170px;
+    top: 200px;
+}
+
+.fourgrid1{
+    position: absolute;
+    width: 155px;
+    height: 191px;
+    left: 25px;
+    top: 244px;
+}
+
+.fourgrid1text{
+    position: absolute;
+    left: 5%;
+    right: 54.11%;
+    top: 0%;
+    bottom: 59.6%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.fourgrid2{
+    position: absolute;
+    width: 155px;
+    height: 191px;
+    left: 209px;
+    top: 245px;
+}
+
+.fourgrid2text{
+    position: absolute;
+    left: 54.11%;
+    right: 8.7%;
+    top: 0%;
+    bottom: 59.15%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.fourgrid3{
+    position: absolute;
+    width: 155px;
+    height: 191px;
+    left: 25px;
+    top: 457px;
+}
+
+.fourgrid3text{
+    position: absolute;
+    left: 6%;
+    right: 53.38%;
+    top: 25%;
+    bottom: 35.83%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.fourgrid4{
+    position: absolute;
+    width: 155px;
+    height: 191px;
+    left: 209px;
+    top: 458px;
+}
+
+.fourgrid4text{
+    position: absolute;
+    left: 54.11%;
+    right: 8.7%;
+    top: 25%;
+    bottom: 35.94%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .screentitle{
