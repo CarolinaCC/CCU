@@ -922,10 +922,50 @@ h2 {
 .bigrectangule{
     position: absolute;
     width: 336px;
-    height: 485px;
+    height: 480px;
     left: 35px;
-    top: 207px;
-
+    top: 215px;
+    
     background: #FFE8E3;
     border-radius: 10px;
+}
+
+.rec5{
+    position: absolute;
+    width: 339px;
+    height: 61px;
+    left: 32px;
+    top: 729px;
+    
+    background: #F5DCCB;
+    border-radius: 10px;
+}
+
+.big_buttons_text{
+    position: absolute;
+    width: 207.74px;
+    height: 30px;
+    left: 167px;
+    top: 730px;
+    
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    text-align: center;
+    
+    color: #373737;
+     
+}
+
+.mindfulness_img{
+    position: absolute;
+    width: 278px;
+    height: 200,25px;
+    top: 177px;
+    bottom: 67px;
+   
+    right: 30px;
 }
