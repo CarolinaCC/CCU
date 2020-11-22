@@ -969,3 +969,39 @@ h2 {
    
     right: 30px;
 }
+
+.mindfulness_txt{
+    position: absolute;
+    width: 309px;
+    height: 384px;
+    left: 20px;
+    top: 30px;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    text-align: justify;
+
+    color: #373737;
+}
+
+.small_mindfulness_txt{
+    position: absolute;
+    width: 309px;
+    height: 384px;
+    left: 20px;
+    top: 255px;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #373737;
+}
