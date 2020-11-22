@@ -132,7 +132,15 @@ body {
     bottom: 9.71%;
 }
 
-.bottombuttons{
+.navsafeplace{
+    position: absolute;
+    width: 260.54px;
+    height: 54px;
+    left: -40px;
+    top: 815px;
+}
+
+.navhome{
     position: absolute;
     width: 260.54px;
     height: 54px;
@@ -140,12 +148,74 @@ body {
     top: 815px;
 }
 
-.bottombuttons2{
+.navlearn{
+    position: absolute;
+    width: 260.54px;
+    height: 30px;
+    left: 184px;
+    top: 822px;
+}
+
+.navlearntext{
+    position: absolute;
+    left: -39.96%;
+    right: -91.5%;
+    top: 92.5%;
+    bottom: 0%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.separator2{
+    position: absolute;
+    left: -0.97%;
+    right: 0.97%;
+    top: 92.2%;
+    bottom: 9.71%;
+}
+
+.navsafeplace2{
     position: absolute;
     width: 260.54px;
     height: 54px;
-    left: 65px;
-    top: 785px;
+    left: -50px;
+    top: 795px;
+}
+
+.navhome2{
+    position: absolute;
+    width: 260.54px;
+    height: 54px;
+    left: 62px;
+    top: 795px;
+}
+
+.navlearn2{
+    position: absolute;
+    width: 260.54px;
+    height: 30px;
+    left: 174px;
+    top: 802px;
+}
+
+.navlearntext2{
+    position: absolute;
+    left: -39.96%;
+    right: -94%;
+    top: 94.5%;
+    bottom: 0%;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
 }
 
 .youcanclick{
