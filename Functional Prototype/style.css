@@ -823,3 +823,109 @@ h2 {
     border-radius: 10px;
 }
 
+/*LEARN MORE*/
+
+/*screen 1: learnmore*/
+.LMtittle{
+    position: absolute;
+    width: 288px;
+    height: 23px;
+    left: 123px;
+    top: 78px;
+    
+    font-family: Mulish;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+    
+    display: flex;
+    align-items: center;
+    
+    color: #373737;
+}
+
+.LMsmalltittle{
+    position: absolute;
+    width: 207.74px;
+    height: 18px;
+    left: 92px;
+    top: 102px;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+
+    color: #373737;
+}
+
+.small_i{
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    left: 93px;
+    top: 78px;
+}
+
+.rec1{
+    position: absolute;
+    width: 334px;
+    height: 70px;
+    left: 42px;
+    top: 296px;
+
+    background: #FFE8E3;
+    border-radius: 10px;
+}
+
+.rec2{
+    position: absolute;
+    width: 334px;
+    height: 70px;
+    left: 42px;
+    top: 388px;
+
+    background: #F5DCCB;
+    border-radius: 10px;
+}
+
+.rec3{
+    position: absolute;
+    width: 334px;
+    height: 70px;
+    left: 42px;
+    top: 480px;
+
+    background: #EAB197;
+    border-radius: 10px;
+}
+
+.rec4{
+    position: absolute;
+    width: 333px;
+    height: 70px;
+    left: 41px;
+    top: 572px;
+
+    background: #96C9D9;
+    border-radius: 10px;
+}
+
+/*screen 2: lm_mindfulness*/
+.bigrectangule{
+    position: absolute;
+    width: 336px;
+    height: 485px;
+    left: 35px;
+    top: 207px;
+
+    background: #FFE8E3;
+    border-radius: 10px;
+}
