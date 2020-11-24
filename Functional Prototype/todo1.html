@@ -21,8 +21,17 @@
     <header>
         <div class="splash">
             <div class="phone">
-                <div class="screen">    
-                    <div style="margin-top: 150%;">
+                <div class="screen"> 
+                    <div id="inputTask" style="margin-top:25%; height: 60%;">
+                        <form>
+                            <input class="underscreentitle" type="text" id="myInput" name="task" placeholder="Insert the new task" style="margin-top: 10%; margin-left: -10%; width: 60%; border: none; border-bottom: 1px grey solid;">
+                            <span onclick="addToList()"><img src="https://www.flaticon.com/svg/static/icons/svg/711/711239.svg" alt="Submit"  style="width: 5%; margin-left: 60%; cursor: pointer;"></span>
+                        </form> 
+                            
+                        <ul id="myUL">
+                        </ul>
+                    </div>   
+                    <div>
                         <div id="complete">Completed</div>
                         <div id="completedTask"></div>
                     </div>
@@ -34,7 +43,7 @@
                     <img src="./img/backbutton.svg" onclick="window.location.href = 'mainmenu.html'" alt= "Header" class="backbutton">
                 </div>
                 <div class="underscreentitle" style="width: 100%;">
-                    <p>Click on the screen to add a new task.</p>
+                    <p>Click on the box to complete a task.</p>
                 </div>
             
                 <div>
@@ -75,8 +84,37 @@
     margin-top: -4.4%;
     margin-right: 5px;
 }
-
 </style>
+
+<script>
+// Create a new list item when clicking on the "Add" button
+function addToList() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("myUL").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+}
+    
+</script>
 
 </body>
 </html>
