@@ -21,33 +21,31 @@
     <header>
         <div class="splash">
             <div class="phone">
-                <div class="screen"></div>
-                <div class="welcometext">
-                    <p>Welcome <span id="nameUser"></span>!</p>
-                    <script>
-                        getValue();
-                        function getValue() {
-                            document.getElementById("nameUser").append(localStorage.getItem('user_name'));
-                        }
-                    </script>
+                <div class="screen">    
+                    <div style="margin-top: 150%;">
+                        <div id="complete">Completed</div>
+                        <div id="completedTask"></div>
+                    </div>
                 </div>
+                <div class="screentitle">
+                    <p>What are your goals today?</p>
+                </div>
+                <div onclick="window.location.href = 'mainmenu.html'">
+                    <img src="./img/backbutton.svg" onclick="window.location.href = 'mainmenu.html'" alt= "Header" class="backbutton">
+                </div>
+                <div class="underscreentitle" style="width: 100%;">
+                    <p>Click on the screen to add a new task.</p>
+                </div>
+            
                 <div>
-                    <img src="./img/pau.svg" alt= "Header" class="smallpau">
-                    <img src="./img/passaro.svg" alt= "Header" class="smallpassaro">
-                    <img src="./img/circle.svg" onclick="window.location.href = 'moodtracker1.html'" alt= "Header" class="circle3">
+                    <img src="./img/pau.svg" alt= "Header" class="smallpau" style="opacity: 20%;">
                 </div>
+
                 <div>
-                    <img src="./img/relaxation.svg" onclick="window.location.href = 'meditation0.html'" alt= "Header" class="menurelaxation">
-                    <img src="./img/music.svg" alt= "Header" class="menumusic">
-                    <img src="./img/todolist.svg" onclick="window.location.href = 'todo1.html'" alt= "Header" class="menutodolist">
+                    <img src="./img/pau.svg" alt= "Header" class="smallpau2" style="opacity: 20%;">
                 </div>
-                <div>
-                    <img src="./img/shuffle.svg" alt= "Header" class="menushuffle1">
-                    <img src="./img/shuffle.svg" alt= "Header" class="menushuffle2">
-                </div>
-                <div>
-                    <img src="./img/pau.svg" alt= "Header" class="smallpau2">
-                </div>
+
+
                 <div>
                     <img src="./img/line.svg" alt= "Header" class="separator">
                     <img src="./img/safeplace.svg" alt= "Header" class="navsafeplace">
@@ -58,5 +56,27 @@
             </div>
         </div>
     </header>
+
+<style>
+
+#completedTask{
+    border-top: 1px #D3EFFF solid;
+}
+
+#complete {
+    background-color: #D3EFFF;
+    border-radius: 5px 5px 0 0;
+    z-index: 1;
+    font-size: 14px;
+    width: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+    float: right;
+    margin-top: -4.4%;
+    margin-right: 5px;
+}
+
+</style>
+
 </body>
 </html>
