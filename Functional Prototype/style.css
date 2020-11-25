@@ -1024,21 +1024,22 @@ h2 {
     border-radius: 10px;
 }
 
-.big_buttons_text{
+.big_buttons_next{
     position: absolute;
     width: 207.74px;
-    height: 30px;
-    left: 167px;
-    top: 730px;
+    height: 23px;
+    left: 135px;
+    top: 1px;
     
     font-family: Mulish;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 24px;
-    line-height: 30px;
+    line-height: 23px;
+
     display: flex;
     text-align: center;
-    
+
     color: #373737;
      
 }
@@ -1087,4 +1088,79 @@ h2 {
     align-items: center;
 
     color: #373737;
+}
+
+.big_buttons_goto{
+    position: absolute;
+    width: 207.74px;
+    height: 23px;
+    left: 75px;
+    top: 1px;
+    
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 23px;
+
+    display: flex;
+    text-align: center;
+
+    color: #373737;
+}
+
+
+/*SAFE PLACE*/
+
+.paumedio{
+    position: absolute;
+    width: 255px;
+    height: 73,97px;
+    top: 225px;
+    left: 149px;    
+}
+
+.passaromedio{
+    position: absolute;
+    width: 96px;
+    height: 100,33px;
+    top: 148px;
+    left: 240px;
+}
+
+.text_5senses{
+    position: absolute;
+    width: 292px;
+    height: 207px;
+    left: 65px;
+    top: 300px;
+
+    font-family: Mulish;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+
+    color: #373737;
+}
+
+.start_button{
+    position: absolute;
+    width: 336px;
+    height: 64px;
+    left: 35px;
+    top: 641px;
+    
+    background: #96C9D9;
+    border-radius: 10px;
+}
+
+.emergency_contacts_button{
+    position: absolute;
+    width: 336px;
+    height: 64px;
+    left: 35px;
+    top: 716px;
+
+    background: #EAB197;
+    border-radius: 10px;
 }
