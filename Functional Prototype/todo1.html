@@ -17,7 +17,7 @@
     }
     </style>
 </head>
-<body>
+<body onload="reloadTodo()">
     <header>
         <div class="splash">
             <div class="phone">
@@ -90,27 +90,57 @@
 // Create a new list item when clicking on the "Add" button
 function addToList() {
   var li = document.createElement("li");
+
+  li.style.fontFamily = "Mulish";
+  li.style.fontWeight = "200";
+  li.style.fontStyle = "normal";
+  li.style.fontSize = "14px";
+  li.style.listStyleType = "none";
+  li.style.float = "left";
+  li.style.width = "90%"
+  li.style.height = "auto"
+  li.style.overflow = "hidden"
+  li.style.wordBreak = "break-all"
+  li.style.wordWrap = "break-word"
+  li.style.textAlign = "left"
+  li.style.paddingBottom = "5px"
+
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
+    localStorage.setItem("counter", parseInt(localStorage.getItem("counter"))+1);
+    localStorage.setItem(localStorage.getItem("counter"), inputValue);
     document.getElementById("myUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
+  console.log(localStorage.getItem("counter"), localStorage.getItem(localStorage.getItem("counter")))
+}
 
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
+function reloadTodo(){
+  for (let i = 1; i <= parseInt(localStorage.getItem("counter")); ++i){
+    var li = document.createElement("li");
 
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
+    li.style.fontFamily = "Mulish";
+    li.style.fontWeight = "200";
+    li.style.fontStyle = "normal";
+    li.style.fontSize = "14px";
+    li.style.listStyleType = "none";
+    li.style.float = "left";
+    li.style.width = "90%"
+    li.style.height = "auto"
+    li.style.overflow = "hidden"
+    li.style.wordBreak = "break-all"
+    li.style.wordWrap = "break-word"
+    li.style.textAlign = "left"
+    li.style.paddingBottom = "5px"
+
+    var inputValue = localStorage.getItem(i);
+    var t = document.createTextNode(inputValue);
+    li.appendChild(t);
+    document.getElementById("myUL").appendChild(li);
   }
 }
     
