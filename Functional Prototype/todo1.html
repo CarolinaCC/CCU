@@ -87,9 +87,11 @@
 </style>
 
 <script>
-// Create a new list item when clicking on the "Add" button
+
 function addToList() {
   var li = document.createElement("li");
+  var label= document.createElement("label");
+  var checkbox = document.createElement("input");
 
   li.style.fontFamily = "Mulish";
   li.style.fontWeight = "200";
@@ -107,12 +109,29 @@ function addToList() {
 
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
+
+  checkbox.type = "checkbox";
+  checkbox.id = 'C'+localStorage.getItem("counter");
+  checkbox.onclick = function() {
+    if ( this.checked ) {
+      localStorage.setItem(this.id, true);
+    }
+};
+
+  label.appendChild(checkbox);
+  label.appendChild(t);
+
+
+  li.appendChild(label);
+  li.appendChild(checkbox);
   li.appendChild(t);
+
   if (inputValue === '') {
     alert("You must write something!");
   } else {
     localStorage.setItem("counter", parseInt(localStorage.getItem("counter"))+1);
     localStorage.setItem(localStorage.getItem("counter"), inputValue);
+    localStorage.setItem('C'+localStorage.getItem("counter"), false);
     document.getElementById("myUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
@@ -123,12 +142,23 @@ function reloadTodo(){
   for (let i = 1; i <= parseInt(localStorage.getItem("counter")); ++i){
     var li = document.createElement("li");
 
-    li.style.fontFamily = "Mulish";
-    li.style.fontWeight = "200";
-    li.style.fontStyle = "normal";
-    li.style.fontSize = "14px";
-    li.style.listStyleType = "none";
-    li.style.float = "left";
+    var inputValue = localStorage.getItem(i);
+    var t = document.createTextNode(inputValue);
+
+    var label= document.createElement("label");
+    var checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.id = 'C'+i;
+
+    label.appendChild(checkbox);
+    label.appendChild(t);
+
+    li.style.fontFamily = "Mulish"
+    li.style.fontWeight = "200"
+    li.style.fontStyle = "normal"
+    li.style.fontSize = "14px"
+    li.style.listStyleType = "none"
+    li.style.float = "left"
     li.style.width = "90%"
     li.style.height = "auto"
     li.style.overflow = "hidden"
@@ -137,13 +167,22 @@ function reloadTodo(){
     li.style.textAlign = "left"
     li.style.paddingBottom = "5px"
 
-    var inputValue = localStorage.getItem(i);
-    var t = document.createTextNode(inputValue);
+    
+    li.appendChild(label);
+    li.appendChild(checkbox);
     li.appendChild(t);
+
     document.getElementById("myUL").appendChild(li);
+
+    var seeIfChecked = localStorage.getItem('C'+i);
+    if (seeIfChecked === 'true') {
+      document.getElementById("C"+i).checked = true;
+    }
   }
 }
-    
+
+// this has bug, when checked and then reenter the page, the element before is the checked one
+
 </script>
 
 </body>
