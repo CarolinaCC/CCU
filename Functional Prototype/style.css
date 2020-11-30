@@ -1164,3 +1164,70 @@ h2 {
     background: #EAB197;
     border-radius: 10px;
 }
+
+.gotorelaxationbutton{
+    position: absolute;
+    width: 339px;
+    height: 61px;
+    left: 39px;
+    top: 728px;
+
+    background: #96C9D9;
+    border-radius: 10px;
+}
+
+.gotorelaxationtext{
+    position: absolute;
+    width: 207.74px;
+    height: 30px;
+    left: 115px;
+    top: 745px;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    display: flex;
+    text-align: center;
+
+    color: #373737;
+}
+
+.emergency_contacts_text{
+    position: absolute;
+    width: 307px;
+    height: 576px;
+    left: 54px;
+    top: 150px;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+  
+    text-align: left;
+
+    color: #373737;
+}
+
+.letsbreathe{
+    position: absolute;
+    width: 288px;
+    height: 23px;
+    left: 150px;
+    top: 168px;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    /* identical to box height */
+
+    display: flex;
+    text-align: center;
+
+    color: #373737;
+}
