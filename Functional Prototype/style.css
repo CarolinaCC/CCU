@@ -1241,3 +1241,10 @@ h2 {
     left: 168px;
     top: 320px;
 }
+/*VIDEO*/
+
+.video{
+    position: absolute;
+    left: 0px;
+    top: 250px;
+}
