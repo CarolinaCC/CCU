@@ -18,6 +18,7 @@
     </style>
 </head>
 <body>
+    
     <header>
         <div class="splash">
             <div class="phone">
@@ -31,28 +32,18 @@
                 <div onclick="window.location.href = 'meditation1.html'">
                     <img src="./img/backbutton.svg" alt= "Header" class="backbutton2">
                 </div>
-                <div class="underscreentitle2">
-                    <p>Choose one meditation</p>
-                </div>
-                <div>
-                    <img src="./img/buttontype1.svg" onclick="window.location.href = 'meditation3.html'" alt= "Header" class="fourgrid1">
-                    <img src="./img/buttontype1.svg" alt= "Header" class="fourgrid2">
-                    <img src="./img/buttontype1.svg" alt= "Header" class="fourgrid3">
-                    <img src="./img/buttontype1.svg" alt= "Header" class="fourgrid4">
-                </div>
-                <div>
-                    <h2 class="fourgrid1text">
-                        <p>Body scan</p>
-                    </h2>
-                    <h2 class="fourgrid2text">
-                        <p>Walk through the forest</p>
-                    </h2>
-                    <h2 class="fourgrid3text">
-                        <p>Deep meditation</p>
-                    </h2>
-                    <h2 class="fourgrid4text">
-                        <p>Deeper meditation</p>
-                    </h2>
+                <div>  
+                    <script src="player.js"></script>
+                        <div class="bodyPlayer"></div>
+                      <audio preload="auto" id="audio" controls class="audio">
+                        <source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3">
+                        <source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.ogg">
+                          </audio>
+                                      <table class="player">
+                                          <td><input type="checkbox" id="backward" onclick="backwardAudio()"/><label class="backward" for="backward"></label></td>
+                                          <td><input type="checkbox" id="play" title="Play" onclick="togglePlayPause()"/><label class="play" for="play"></label></td>
+                                          <td><input type="checkbox" id="forward" onclick="forwardAudio()"/><label class="forward" for="forward"></label></td>
+                                      </table>
                 </div>
                 <div>
                     <img src="./img/line.svg" alt= "Header" class="separator2">
@@ -65,5 +56,26 @@
             </div>
         </div>
     </header>
+    <script>
+        var audio = document.getElementById('audio');
+        var playpause = document.getElementById("play");
+
+
+        function togglePlayPause() {
+            if (audio.paused || audio.ended) {
+                playpause.title = "Pause";
+                audio.play();
+            } else {
+                playpause.title = "Play";
+                audio.pause();
+            }
+        }
+        function forwardAudio() {
+            audio.currentTime += 15.0; 
+        }
+        function backwardAudio() {
+            audio.currentTime -= 15.0; 
+        }
+    </script>
 </body>
 </html>

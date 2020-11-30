@@ -1231,3 +1231,13 @@ h2 {
 
     color: #373737;
 }
+
+.audio{
+    visibility: hidden;
+}
+
+.player{
+    position: relative;
+    left: 168px;
+    top: 320px;
+}
