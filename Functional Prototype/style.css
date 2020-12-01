@@ -1090,6 +1090,25 @@ h2 {
     color: #373737;
 }
 
+.small_todolist_txt{
+    position: absolute;
+    width: 309px;
+    height: 384px;
+    left: 20px;
+    top: 248px;
+
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+
+    color: #373737;
+}
+
+
 .big_buttons_goto{
     position: absolute;
     width: 207.74px;
