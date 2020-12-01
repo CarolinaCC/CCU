@@ -1128,6 +1128,18 @@ h2 {
     color: #373737;
 }
 
+/*screen 2: lm_todo*/
+.bigrectangule_todo{
+    position: absolute;
+    width: 336px;
+    height: 480px;
+    left: 35px;
+    top: 215px;
+    
+    background: #EAB197;
+    border-radius: 10px;
+}
+
 
 /*SAFE PLACE*/
 
