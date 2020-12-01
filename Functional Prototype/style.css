@@ -1248,3 +1248,12 @@ h2 {
     left: 0px;
     top: 250px;
 }
+
+.yogabg{
+    position: absolute;
+    width: 792.73px;
+    height: 600.48px;
+    opacity: 0.3;
+    left: -310px;
+    top: 180px;
+}
