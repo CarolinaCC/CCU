@@ -22,36 +22,35 @@
         <div class="splash">
             <div class="phone">
                 <div class="screen"></div>
-                <div class="welcometext">
-                    <p>Welcome <span id="nameUser"></span>!</p>
-                    <script>
-                        getValue();
-                        function getValue() {
-                            document.getElementById("nameUser").append(localStorage.getItem('user_name'));
-                        }
-                    </script>
+                <div class="screentitle">
+                    <p>What do you want to listen to?</p>
                 </div>
-                <div>
-                    <img src="./img/pau.svg" alt= "Header" class="smallpau">
-                    <img src="./img/passaro.svg" alt= "Header" class="smallpassaro">
-                    <img src="./img/circle.svg" onclick="window.location.href = 'moodtracker1.html'" alt= "Header" class="circle3">
+                <div onclick="window.location.href = 'mainmenu.html'">
+                    <img src="./img/backbutton.svg" alt= "Header" class="backbutton">
                 </div>
-                <div>
-                    <img src="./img/relaxation.svg" onclick="window.location.href = 'meditation0.html'" alt= "Header" class="menurelaxation">
-                    <img src="./img/music.svg" onclick="window.location.href = 'music_menu.html'" alt= "Header" class="menumusic">
-                    <img src="./img/todolist.svg" onclick="window.location.href = 'todo1.html'" alt= "Header" class="menutodolist">
+                <div class="underscreentitle">
+                    <p>Choose a theme:</p>
                 </div>
-                <div>
-                    <img src="./img/shuffle.svg" alt= "Header" class="menushuffle1">
-                    <img src="./img/shuffle.svg" alt= "Header" class="menushuffle2">
+                <div onclick="window.location.href = 'meditation1.html'">
+                    <img src="./img/meditationbutton.svg" alt= "Header" class="menumeditation" style="top: 249px;">
+                    <img src="./img/whitenoisechar.svg" alt= "Header" class="menumeditationchar" style="top: 264px;">
                 </div>
+                <div onclick="window.location.href = 'music_ambience.html'">
+                    <img src="./img/breathingbutton.svg" alt= "Header" class="menubreathing" style="top: 464px;">
+                    <img src="./img/ambiencechar.svg" alt= "Header" class="menubreathingchar" style="top: 474px;">
+                </div> 
                 <div>
-                    <img src="./img/pau.svg" alt= "Header" class="smallpau2">
+                    <h2 class="menumeditationtext" style="top: 287.8px;width: 115px;height: 35px;left: 35.933px;">
+                        <p>White noise</p>
+                    </h2>
+                    <h2 class="menubreathingtext" style="top: 519px;">
+                        <p>Ambience</p>
+                    </h2>
                 </div>
                 <div>
                     <img src="./img/line.svg" alt= "Header" class="separator">
                     <img src="./img/safeplace.svg" onclick="window.location.href = 'safeplace.html'" alt= "Header" class="navsafeplace">
-                    <img src="./img/homeunselect.svg" alt= "Header" class="navhome">
+                    <img src="./img/home.svg" onclick="window.location.href = 'mainmenu.html'" alt= "Header" class="navhome">
                     <img src="./img/learnmore.svg" onclick="window.location.href = 'learnmore.html'" alt= "Header" class="navlearn">
                     <h6 class="navlearntext">Learn more</h6>
                 </div>
