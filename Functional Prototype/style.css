@@ -698,6 +698,21 @@ body {
     text-align: left;
 }
 
+.screentitle3{
+    position: absolute;
+    width: 288px;
+    height: 23px;
+    left: 54px;
+    top: 131px;
+
+    font-family: Mulish;
+    font-style: black;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+}
+
 .underscreentitle{
     position: absolute;
     width: 207.74px;

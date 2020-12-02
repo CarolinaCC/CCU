@@ -29,20 +29,23 @@
                 <div class="screentitle2">
                     <p>Meditation to focus</p>
                 </div>
+                <div class="screentitle3">
+                    <p>Body Scan</p>
+                </div>
                 <div onclick="window.location.href = 'meditation2.html'">
                     <img src="./img/backbutton.svg" alt= "Header" class="backbutton2">
                 </div>
                 <div>  
                         <div class="bodyPlayer"></div>
                       <audio preload="auto" id="audio" controls class="audio" ontimeupdate="timerDisplay()">
-                        <source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3"> <!--change music here-->
+                        <source src="./sound/Body Scan Meditation - 6 minute relaxing guided meditation.mp3"> <!--change music here-->
                           </audio>
                                       <div class="fifteenback">
                                         <input type="checkbox" id="backward" onclick="backwardAudio()"/><label class="backward" for="backward"><img src="./img/15back.svg" id="15back" alt="Header"></label>
                                       </div>
                                       <div class="playbutton">    
                                         <input type="checkbox" id="play" name="play" onclick="togglePlayPause()"/><label for="play"><img src="./img/playbutton.svg" id="Playbutton" alt="Header"></label>
-                                        <span id="tracktime">4:05</span>
+                                        <span id="tracktime">5:59</span>
                                       </div>
                                       <div class="fifteenforward">
                                         <input type="checkbox" id="forward" onclick="forwardAudio()"/><label class="forward" for="forward"><img src="./img/15forward.svg" id="15forward" alt="Header"></label>
