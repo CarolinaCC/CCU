@@ -29,25 +29,28 @@
                 <div class="screentitle2">
                     <p>Meditation to focus</p>
                 </div>
-                <div onclick="window.location.href = 'meditation1.html'">
+                <div onclick="window.location.href = 'meditation2.html'">
                     <img src="./img/backbutton.svg" alt= "Header" class="backbutton2">
                 </div>
                 <div>  
                     <script src="player.js"></script>
                         <div class="bodyPlayer"></div>
                       <audio preload="auto" id="audio" controls class="audio">
-                        <source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3">
-                        <source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.ogg">
+                        <source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3"> <!--change music here-->
                           </audio>
-                                      <table class="player">
-                                          <td><input type="checkbox" id="backward" onclick="backwardAudio()"/><label class="backward" for="backward"></label></td>
-                                          <td><input type="checkbox" id="play" title="Play" onclick="togglePlayPause()"/><label class="play" for="play"></label></td>
-                                          <td><input type="checkbox" id="forward" onclick="forwardAudio()"/><label class="forward" for="forward"></label></td>
-                                      </table>
+                                      <div class="fifteenback">
+                                        <input type="checkbox" id="backward" onclick="backwardAudio()"/><label class="backward" for="backward"><img src="./img/15back.svg" id="15back" alt="Header"></label>
+                                      </div>
+                                      <div class="playbutton">    
+                                        <input type="checkbox" id="play" name="play" onclick="togglePlayPause()"/><label for="play"><img src="./img/playbutton.svg" id="Playbutton" alt="Header"></label>
+                                      </div>
+                                      <div class="fifteenforward">
+                                        <input type="checkbox" id="forward" onclick="forwardAudio()"/><label class="forward" for="forward"><img src="./img/15forward.svg" id="15forward" alt="Header"></label>
+                                      </div>
                 </div>
                 <div>
                     <img src="./img/line.svg" alt= "Header" class="separator2">
-                    <img src="./img/safeplace.svg" alt= "Header" class="navsafeplace2">
+                    <img src="./img/safeplace.svg" onclick="window.location.href = 'safeplace.html'" alt= "Header" class="navsafeplace2">
                     <img src="./img/home.svg" onclick="window.location.href = 'mainmenu.html'" alt= "Header" class="navhome2">
                     <img src="./img/learnmore.svg" onclick="window.location.href = 'learnmore.html'" alt= "Header" class="navlearn2">
                     <h6 class="navlearntext2">Learn more</h6>
@@ -64,9 +67,11 @@
         function togglePlayPause() {
             if (audio.paused || audio.ended) {
                 playpause.title = "Pause";
+                document.getElementById("Playbutton").src = "./img/pausebutton.svg";
                 audio.play();
             } else {
                 playpause.title = "Play";
+                document.getElementById("Playbutton").src = "./img/playbutton.svg";
                 audio.pause();
             }
         }

@@ -1288,3 +1288,48 @@ h2 {
     left: -310px;
     top: 180px;
 }
+
+
+.playbutton{
+    position: absolute;
+    width: 115px;
+    top: 44%;
+    left: 36%;
+}
+.playbutton input[type="checkbox"] {
+    
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.fifteenback{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 48%;
+    left: 14%
+}
+
+.fifteenback input[type="checkbox"]{
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    top: 180%;
+}
+
+.fifteenforward{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 48%;
+    left: 73%
+}
+.fifteenforward input[type="checkbox"]{
+    display: none;
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    top: 180%;
+}
