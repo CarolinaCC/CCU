@@ -33,9 +33,8 @@
                     <img src="./img/backbutton.svg" alt= "Header" class="backbutton2">
                 </div>
                 <div>  
-                    <script src="player.js"></script>
                         <div class="bodyPlayer"></div>
-                      <audio preload="auto" id="audio" controls class="audio">
+                      <audio preload="auto" id="audio" controls class="audio" ontimeupdate="timerDisplay()">
                         <source src="http://www.jplayer.org/audio/mp3/Miaow-02-Hidden.mp3"> <!--change music here-->
                           </audio>
                                       <div class="fifteenback">
@@ -43,6 +42,7 @@
                                       </div>
                                       <div class="playbutton">    
                                         <input type="checkbox" id="play" name="play" onclick="togglePlayPause()"/><label for="play"><img src="./img/playbutton.svg" id="Playbutton" alt="Header"></label>
+                                        <span id="tracktime">4:05</span>
                                       </div>
                                       <div class="fifteenforward">
                                         <input type="checkbox" id="forward" onclick="forwardAudio()"/><label class="forward" for="forward"><img src="./img/15forward.svg" id="15forward" alt="Header"></label>
@@ -63,13 +63,36 @@
         var audio = document.getElementById('audio');
         var playpause = document.getElementById("play");
 
+        function timerDisplay(){
+            var minute = Math.floor(Math.floor(audio.duration)/60)
+            var cur_minute = Math.floor(Math.floor(audio.currentTime)/60)
+            if (audio.ended) {
+                document.getElementById("Playbutton").src = "./img/playbutton.svg";
+                document.getElementById('tracktime').innerHTML = "Completed";
+                document.getElementById('tracktime').style.position = "absolute"
+                document.getElementById("tracktime").style.left = "-30%";
+                document.getElementById("tracktime").style.top = "100%";
+                /*if(Math.floor(audio.duration - minute*60) < 10) {
+                    document.getElementById('tracktime').innerHTML = minute + ':0' + Math.floor(audio.duration - minute*60);
+                } else{
+                    document.getElementById('tracktime').innerHTML = minute + ':' + Math.floor(audio.duration - minute*60);
+                }*/
+            } else {
+                if(Math.floor(audio.currentTime - cur_minute*60) < 10) {
+                    document.getElementById('tracktime').innerHTML = Math.floor(Math.floor(audio.currentTime)/60) + ':0' + Math.floor(audio.currentTime - cur_minute*60);
+                } else {
+                    document.getElementById('tracktime').innerHTML = Math.floor(Math.floor(audio.currentTime)/60) + ':' + Math.floor(audio.currentTime - cur_minute*60);
+                }
+            }
+        }
 
         function togglePlayPause() {
-            if (audio.paused || audio.ended) {
+            if (audio.paused) {
                 playpause.title = "Pause";
+                document.getElementById("tracktime").style.left = "15%";
                 document.getElementById("Playbutton").src = "./img/pausebutton.svg";
                 audio.play();
-            } else {
+            }   else {
                 playpause.title = "Play";
                 document.getElementById("Playbutton").src = "./img/playbutton.svg";
                 audio.pause();
