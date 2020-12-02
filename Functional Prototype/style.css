@@ -1348,3 +1348,12 @@ h2 {
     position: relative;
     top: 180%;
 }
+
+
+/*VIDEOS ON LEARN MORE TABS*/
+
+.learnmorevideos{
+    position: absolute;
+    left: 37.5px;
+    top: 320px;
+}
