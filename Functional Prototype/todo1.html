@@ -33,7 +33,10 @@
                     </div>   
                     <div>
                         <div id="complete">Completed</div>
-                        <div id="completedTask"></div>
+                        <div id="completedTask">
+                          <ul id="myULDone">
+                          </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="screentitle">
@@ -108,34 +111,49 @@ function addToList() {
   li.style.paddingBottom = "5px"
 
   var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
 
-  checkbox.type = "checkbox";
-  checkbox.id = 'C'+localStorage.getItem("counter");
-  checkbox.onclick = function() {
-    if ( this.checked ) {
-      localStorage.setItem(this.id, true);
-    }
-};
-
-  label.appendChild(checkbox);
-  label.appendChild(t);
-
-
-  li.appendChild(label);
-  li.appendChild(checkbox);
-  li.appendChild(t);
 
   if (inputValue === '') {
-    alert("You must write something!");
+    // does nothing
   } else {
     localStorage.setItem("counter", parseInt(localStorage.getItem("counter"))+1);
     localStorage.setItem(localStorage.getItem("counter"), inputValue);
     localStorage.setItem('C'+localStorage.getItem("counter"), false);
+
+    var t = document.createTextNode(inputValue);
+
+    checkbox.type = "checkbox";
+    checkbox.id = 'C'+localStorage.getItem("counter");
+    checkbox.onclick = function() {
+      if (this.checked) {
+        if (localStorage.getItem("firstTask") === 'true') {
+          localStorage.setItem("lastTasksInserted", '['+inputValue+']');
+          localStorage.setItem("firstTask", false);
+        }else if (localStorage.getItem("lastTasksInserted").replace('[','').replace(']','').split(",").length < 5){
+          var arr = localStorage.getItem("lastTasksInserted").replace('[','').replace(']','').split(",");
+          localStorage.setItem("lastTasksInserted", arr);
+        } else if (localStorage.getItem("lastTasksInserted").replace('[','').replace(']','').split(",").length == 5) {
+          var arr = localStorage.getItem("lastTasksInserted").replace('[','').replace(']','').split(",");
+          arr.pop();
+          arr.unshift(inputValue);
+          localStorage.setItem("lastTasksInserted", arr);
+        }
+        localStorage.setItem(this.id, true);
+        reloadCompleted()
+      }
+    };
+
+    label.appendChild(checkbox);
+    label.appendChild(t);
+
+
+    li.appendChild(label);
+    li.appendChild(checkbox);
+    li.appendChild(t);
+
     document.getElementById("myUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
-  console.log(localStorage.getItem("counter"), localStorage.getItem(localStorage.getItem("counter")))
 }
 
 function reloadTodo(){
@@ -169,19 +187,55 @@ function reloadTodo(){
 
     
     li.appendChild(label);
+    var seeIfChecked = localStorage.getItem('C'+i);
+    if (seeIfChecked === 'true') {
+      checkbox.checked = true;
+    }
     li.appendChild(checkbox);
     li.appendChild(t);
 
     document.getElementById("myUL").appendChild(li);
+  }
+  reloadCompleted();   
+}
 
-    var seeIfChecked = localStorage.getItem('C'+i);
-    if (seeIfChecked === 'true') {
-      document.getElementById("C"+i).checked = true;
-    }
+function reloadCompleted(){
+  document.getElementById("myULDone").innerHTML = "";
+  // completed tasks
+  var arr = localStorage.getItem("lastTasksInserted").replace('[','').replace(']','').split(",")
+
+  for (let i = 0; i < 5; ++i) {
+    if (typeof(arr[i]) != 'undefined'){
+      var li = document.createElement("li");
+
+      var inputValue = arr[i];
+      var t = document.createTextNode(inputValue);
+
+      li.style.fontFamily = "Mulish"
+      li.style.fontWeight = "200"
+      li.style.fontStyle = "normal"
+      li.style.fontSize = "14px"
+      li.style.listStyleType = "none"
+      li.style.float = "left"
+      li.style.width = "90%"
+      li.style.height = "auto"
+      li.style.overflow = "hidden"
+      li.style.wordBreak = "break-all"
+      li.style.wordWrap = "break-word"
+      li.style.textAlign = "left"
+      li.style.paddingBottom = "5px"
+      li.style.textDecoration =  "line-through"
+
+      li.appendChild(t);
+
+      document.getElementById("myULDone").appendChild(li);
+    }    
   }
 }
 
 // this has bug, when checked and then reenter the page, the element before is the checked one
+
+// on the completed tab, will be presented the last five checked
 
 </script>
 
