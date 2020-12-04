@@ -138,7 +138,6 @@ function addToList() {
           arr.unshift(inputValue);
           localStorage.setItem("lastTasksInserted", arr);
         }
-        console.log('set inclick', this.id)
         localStorage.setItem(this.id, true);
         reloadCompleted()
       }
@@ -188,7 +187,6 @@ function reloadTodo(){
 
     
     li.appendChild(label);
-    console.log('before true', checkbox.id, 'C'+i)
     var seeIfChecked = localStorage.getItem('C'+i);
     if (seeIfChecked === 'true') {
       checkbox.checked = true;
@@ -205,7 +203,6 @@ function reloadCompleted(){
   document.getElementById("myULDone").innerHTML = "";
   // completed tasks
   var arr = localStorage.getItem("lastTasksInserted").replace('[','').replace(']','').split(",")
-  console.log(arr)
 
   for (let i = 0; i < 5; ++i) {
     if (typeof(arr[i]) != 'undefined'){
