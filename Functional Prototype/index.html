@@ -37,8 +37,11 @@
         function cleanLocalStorage(){
             localStorage.clear();
             localStorage.setItem("counter", 0);
+            localStorage.setItem("lastTasksInserted", []);
+            localStorage.setItem("firstTask", true);
             console.log(localStorage.getItem("counter"))
         }
+
     </script>
 </body>
 </html>
