@@ -42,8 +42,8 @@
                     <img src="./img/todolist.svg" onclick="window.location.href = 'todo1.html'" alt= "Header" class="menutodolist">
                 </div>
                 <div>
-                    <img src="./img/shuffle.svg" alt= "Header" class="menushuffle1">
-                    <img src="./img/shuffle.svg" alt= "Header" class="menushuffle2">
+                    <img src="./img/shuffle.svg" alt= "Header" class="menushuffle1" onclick="random_relax()">
+                    <img src="./img/shuffle.svg" alt= "Header" class="menushuffle2" onclick="random_sound()">
                 </div>
                 <div>
                     <img src="./img/pau.svg" alt= "Header" class="smallpau2">
@@ -58,5 +58,25 @@
             </div>
         </div>
     </header>
+    <script>
+        function random_relax() {
+            var arr = ["meditation3.html", "meditation4.html", "meditation5.html","meditation6.html","meditation8.html","meditation9.html","meditation11.html","meditation12.html","meditation14.html","meditation15.html",
+            "breathing2.html", "breathing3.html","breathing4.html", 
+            "video1.html", "video2.html", "video3.html", "video4.html",
+            "flexibility1.html", "flexibility2.html", "flexibility3.html","flexibility4.html",
+            "strength1.html", "strength2.html","strength3.html","strength4.html",
+            "mind1.html", "mind2.html", "mind3.html", "mind4.html"];
+
+            var value = arr[Math.floor(Math.random() * arr.length)];
+             window.location.href = value;     
+        }
+
+        function random_sound() {
+            var arr = ["ambience_sea.html", "ambience_rain.html", "ambience_fireplace.html", 
+            "ambience_forest.html"];
+            var value = arr[Math.floor(Math.random() * arr.length)];
+             window.location.href = value;     
+        }
+    </script>
 </body>
 </html>
