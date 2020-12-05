@@ -151,6 +151,16 @@ function addToList() {
     li.appendChild(checkbox);
     li.appendChild(t);
 
+    var img = document.createElement('img');
+    img.src = 'https://www.flaticon.com/svg/static/icons/svg/1214/1214428.svg';
+    img.id = 'C'+localStorage.getItem("counter");
+    img.width = '15'
+    img.align='right'
+    img.onclick = function (){
+      deleteTask(li);
+    }
+    li.appendChild(img);
+
     document.getElementById("myUL").appendChild(li);
   }
   document.getElementById("myInput").value = "";
@@ -231,6 +241,10 @@ function reloadCompleted(){
       document.getElementById("myULDone").appendChild(li);
     }    
   }
+}
+
+function deleteTask(line){
+  line.remove();
 }
 
 // this has bug, when checked and then reenter the page, the element before is the checked one
