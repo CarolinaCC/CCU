@@ -120,6 +120,7 @@ function addToList() {
     localStorage.setItem(localStorage.getItem("counter"), inputValue);
     localStorage.setItem('C'+localStorage.getItem("counter"), false);
 
+    li.id = "li"+localStorage.getItem("counter");
     var t = document.createTextNode(inputValue);
 
     checkbox.type = "checkbox";
@@ -153,11 +154,11 @@ function addToList() {
 
     var img = document.createElement('img');
     img.src = 'https://www.flaticon.com/svg/static/icons/svg/1214/1214428.svg';
-    img.id = 'C'+localStorage.getItem("counter");
+    img.id = ''+localStorage.getItem("counter");
     img.width = '15'
     img.align='right'
     img.onclick = function (){
-      deleteTask(li);
+      deleteTask(this);
     }
     li.appendChild(img);
 
@@ -194,6 +195,7 @@ function reloadTodo(){
     li.style.wordWrap = "break-word"
     li.style.textAlign = "left"
     li.style.paddingBottom = "5px"
+    li.id = "li"+localStorage.getItem("counter");
 
     
     li.appendChild(label);
@@ -203,6 +205,16 @@ function reloadTodo(){
     }
     li.appendChild(checkbox);
     li.appendChild(t);
+
+    var img = document.createElement('img');
+    img.src = 'https://www.flaticon.com/svg/static/icons/svg/1214/1214428.svg';
+    img.id = ''+i;
+    img.width = '15'
+    img.align='right'
+    img.onclick = function (){
+      deleteTask(this);
+    }
+    li.appendChild(img);
 
     document.getElementById("myUL").appendChild(li);
   }
@@ -243,8 +255,10 @@ function reloadCompleted(){
   }
 }
 
-function deleteTask(line){
-  line.remove();
+function deleteTask(img){
+  console.log(img, 'li'+img.id)
+  var obj = document.getElementById('li'+img.id)
+  obj.remove();
 }
 
 // this has bug, when checked and then reenter the page, the element before is the checked one
