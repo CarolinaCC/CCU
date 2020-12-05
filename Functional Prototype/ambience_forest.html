@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breeze</title>
+    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+    .h2-mulish {
+        font-family: 'Mulish', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="splash">
+            <div class="phone">
+                <div class="screen">
+                <div>
+                    <img src="./img/ambiencebg.svg" alt= "Header" class="meditationbg" style="left: -210px;">
+                </div>
+                <div class="screentitle2">
+                    <p>Ambience</p>
+                </div>
+                <div class="screentitle3">
+                    <p>Forest</p>
+                </div>
+                <div onclick="window.location.href = 'music_ambience.html'">
+                    <img src="./img/backbutton.svg" alt= "Header" class="backbutton2">
+                </div>
+                <div>  
+                        <div class="bodyPlayer"></div>
+                      <audio preload="auto" id="audio" controls class="audio" ontimeupdate="timerDisplay()">
+                        <source src="./sound/relaxing-exotic-forest-ambience-birds-chirping-no-music-5-minutes.mp3"> <!--change music here-->
+                          </audio>
+                                      <div class="fifteenback">
+                                        <input type="checkbox" id="backward" onclick="backwardAudio()"/><label class="backward" for="backward"><img src="./img/15back.svg" id="15back" alt="Header"></label>
+                                      </div>
+                                      <div class="playbutton">    
+                                        <input type="checkbox" id="play" name="play" onclick="togglePlayPause()"/><label for="play"><img src="./img/playbutton.svg" id="Playbutton" alt="Header"></label>
+                                        <span id="tracktime">5:02</span>
+                                      </div>
+                                      <div class="fifteenforward">
+                                        <input type="checkbox" id="forward" onclick="forwardAudio()"/><label class="forward" for="forward"><img src="./img/15forward.svg" id="15forward" alt="Header"></label>
+                                      </div>
+                </div>
+                <div>
+                    <img src="./img/line.svg" alt= "Header" class="separator2">
+                    <img src="./img/safeplace.svg" onclick="window.location.href = 'safeplace.html'" alt= "Header" class="navsafeplace2">
+                    <img src="./img/home.svg" onclick="window.location.href = 'mainmenu.html'" alt= "Header" class="navhome2">
+                    <img src="./img/learnmore.svg" onclick="window.location.href = 'learnmore.html'" alt= "Header" class="navlearn2">
+                    <h6 class="navlearntext2">Learn more</h6>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        var audio = document.getElementById('audio');
+        var playpause = document.getElementById("play");
+
+        function timerDisplay(){
+            var minute = Math.floor(Math.floor(audio.duration)/60)
+            var cur_minute = Math.floor(Math.floor(audio.currentTime)/60)
+            if (audio.ended) {
+                document.getElementById("Playbutton").src = "./img/playbutton.svg";
+                document.getElementById('tracktime').innerHTML = "Completed";
+                document.getElementById('tracktime').style.position = "absolute"
+                document.getElementById("tracktime").style.left = "-30%";
+                document.getElementById("tracktime").style.top = "100%";
+                /*if(Math.floor(audio.duration - minute*60) < 10) {
+                    document.getElementById('tracktime').innerHTML = minute + ':0' + Math.floor(audio.duration - minute*60);
+                } else{
+                    document.getElementById('tracktime').innerHTML = minute + ':' + Math.floor(audio.duration - minute*60);
+                }*/
+            } else {
+                if(Math.floor(audio.currentTime - cur_minute*60) < 10) {
+                    document.getElementById('tracktime').innerHTML = Math.floor(Math.floor(audio.currentTime)/60) + ':0' + Math.floor(audio.currentTime - cur_minute*60);
+                } else {
+                    document.getElementById('tracktime').innerHTML = Math.floor(Math.floor(audio.currentTime)/60) + ':' + Math.floor(audio.currentTime - cur_minute*60);
+                }
+            }
+        }
+
+        function togglePlayPause() {
+            if (audio.paused) {
+                playpause.title = "Pause";
+                document.getElementById("tracktime").style.left = "15%";
+                document.getElementById("Playbutton").src = "./img/pausebutton.svg";
+                audio.play();
+            }   else {
+                playpause.title = "Play";
+                document.getElementById("Playbutton").src = "./img/playbutton.svg";
+                audio.pause();
+            }
+        }
+        function forwardAudio() {
+            audio.currentTime += 15.0; 
+        }
+        function backwardAudio() {
+            document.getElementById("tracktime").style.left = "15%";
+            audio.currentTime -= 15.0; 
+        }
+    </script>
+</body>
+</html>

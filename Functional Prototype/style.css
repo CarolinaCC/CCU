@@ -792,6 +792,7 @@ h2 {
     font-size:2.5rem;
     text-align:center;
     font-weight:100;
+    user-select: none;
 }
 
 .splashlogo{
@@ -1128,7 +1129,7 @@ h2 {
     position: absolute;
     width: 207.74px;
     height: 23px;
-    left: 75px;
+    left: 95px;
     top: 1px;
     
     font-family: Mulish;
